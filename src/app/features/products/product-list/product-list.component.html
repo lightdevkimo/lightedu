@@ -1,0 +1,44 @@
+<!-- tools (sorting , change view , exporting) -->
+<div class="item-listing__tools">
+  <select class="form-control" name="" id="">
+    <option value="1">Featured</option>
+    <option value="2">Price low to high</option>
+    <option value="3">Price high to low</option>
+    <option value="4">Name</option>
+  </select>
+  <a class="action-btn" href="#">
+    <i class="fas fa-plus"></i>
+  </a>
+</div>
+<div class="item-listing__items item-listing--3items">
+<!--  <app-product-item *ngIf="6<5" [productItem]="productsArray[0]"  class="item-medium-1"></app-product-item>-->
+  <!--
+  <app-product-item [productItem]="productsArray[0]"  class="item-medium-1"></app-product-item>
+  <app-product-item [productItem]="productsArray[1]" class="item-medium-1"></app-product-item>
+  <app-product-item [productItem]="productsArray[2]" class="item-medium-1"></app-product-item>
+  <app-product-item [productItem]="productsArray[3]" class="item-medium-1"></app-product-item>
+  <app-product-item [productItem]="productsArray[4]" class="item-medium-1"></app-product-item>
+  <app-product-item [productItem]="productsArray[5]" class="item-medium-1"></app-product-item>
+  <app-product-item [productItem]="productsArray[6]" class="item-medium-1"></app-product-item>
+  <app-product-item [productItem]="productsArray[7]" class="item-medium-1"></app-product-item>
+  <app-product-item [productItem]="productsArray[8]" class="item-medium-1"></app-product-item>
+  -->
+  <app-product-item (itemAdded)="onItemAdded($event)"   *ngFor="let item of productsArray; let index" [productItem]="item"  class="item-medium-1"></app-product-item>
+
+</div>
+<!-- paging -->
+<div class="paging">
+  <!-- left arrow -->
+  <div class="paging__arrow">
+    <i class="fas fa-angle-left"></i>
+  </div>
+  <!-- page number -->
+  <div class="paging__number active">1</div>
+  <div class="paging__number">2</div>
+  <div class="paging__number">3</div>
+  <!-- right arrow -->
+  <div class="paging__arrow">
+    <i class="fas fa-angle-right"></i>
+  </div>
+</div>
+

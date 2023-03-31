@@ -1,0 +1,20 @@
+
+<!-- header -->
+<div class="header">
+  <!--top nav-->
+  <app-nav-top ></app-nav-top>
+
+  <!--middle nav-->
+
+  <app-middle-header [theAddedProduct]="addedProduct" (itemdel)="onItemdel($event)" ></app-middle-header>
+
+  <!--lower nav-->
+
+  <app-lower-header></app-lower-header>
+
+</div>
+<!--End header -->
+<!-- Listing Items -->
+<app-product-list-container (onItemAddedFromContainer)="onItemAdd($event)"></app-product-list-container>
+
+<app-footer></app-footer>
